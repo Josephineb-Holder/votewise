@@ -1,22 +1,30 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import {AllImages} from '../../votewise/imagesFile/GlobalImage.js'
 
-function HomeScreen({ navigation }) {
+function HomeScreen() {
     return (
         <>
-            <View style={styles.container}>
+            <View>
                 <Text>This is the Home screen</Text>
+                <Image styles={styles.image} source = {'AllImages.homeImages.flag_chair.jpeg'} />
             </View>
 
      </>
         )
 }
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: Center,
-        alignItems: Center
-    }
 
+const styles = StyleSheet.create({
+    container:{
+        flex: 1,
+        justifyContent:"center",
+        alignItems: "center"
+    },
+    image:{
+        width: 80,
+        height: 80,
+        resizeMode: 'cover'
+    }
 })
-export default HomeScreen
+
+export default HomeScreen;
